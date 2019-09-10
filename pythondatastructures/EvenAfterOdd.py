@@ -1,3 +1,4 @@
+# Problem ID 331 even after odd in a LL
 class Node:
     def __init__(self, data):
         self.data = data
@@ -10,7 +11,38 @@ def arrange_LinkedList(head):
     #############################
     # PLEASE ADD YOUR CODE HERE #
     #############################
-    pass
+    evenHead = None
+    evenFirst = None
+    oddFirst = None
+    oddHead = None
+    if head is None:
+        return head
+    while head is not None:
+        if head.data % 2 > 0:
+            if oddFirst is None:
+                oddFirst = head
+                oddHead = oddFirst
+            else:
+                oddHead.next = head
+                oddHead = head
+        else:
+            if evenFirst is None:
+                evenFirst = head
+                evenHead = evenFirst
+            else:
+                evenHead.next = head
+                evenHead = head
+        head = head.next
+    
+    if evenFirst is not None:
+        evenHead.next = None
+    
+    if oddFirst is None:
+        return evenFirst
+    else:
+        oddHead.next = evenFirst
+        return oddFirst
+    
 
 def ll(arr):
     if len(arr)==0:
