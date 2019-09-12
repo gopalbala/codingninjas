@@ -31,24 +31,24 @@ def skipMdeleteN(head, M, N):
              temp = temp.next
              count +=1
              j+=1
-        if temp is not None:
-            print(prev.data, temp.data)
+        # if temp is not None:
+        #     print(prev.data, temp.data)
         prev.next = temp
         
     return head
 
-def length(head):
-#############################
-# PLEASE ADD YOUR CODE HERE #
-#############################
-    temp = head
-    l = 0
-    if temp is None:
+    def length(head):
+    #############################
+    # PLEASE ADD YOUR CODE HERE #
+    #############################
+        temp = head
+        l = 0
+        if temp is None:
+            return l
+        while temp is not None:
+            l += 1
+            temp = temp.next
         return l
-    while temp is not None:
-        l += 1
-        temp = temp.next
-    return l
 
 def ll(arr):
     if len(arr)==0:
