@@ -8,9 +8,8 @@ def reverseFirstK(q1,k):
     item = q1.get()
     reverseFirstK(q1,k)
     q1.put(item)
-    i = 0     
-    while i < k-1:
-        q1.put(q1.get())  
+       
+    
         
 from sys import setrecursionlimit
 setrecursionlimit(11000)
@@ -22,7 +21,8 @@ for ele in li:
 k = int(input())
 reverseFirstK(q,k) 
 i = 0
-  
+while i < k-1:
+    q1.put(q1.get())    
 while(q.qsize()>0):
 	print(q.get())
 	n-=1
