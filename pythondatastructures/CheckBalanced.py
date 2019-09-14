@@ -44,27 +44,25 @@ class Stack:
     
 def checkBalanced(expr):
     st = Stack()
-    for s in expr.split():
+    for s in expr:
         if s == "(" or s == "{" or s == "[":
             st.push(s)
         elif s == ")":
-            print(st.top())
             if st.top() != "(":
                 return False
             st.pop()
         elif s == "}":
-            print(st.top())
             if st.top() != "{":
                 return False
             st.pop()
         elif s == "]":
-            print(st.top())
             if st.top() != "[":
                 return False
             st.pop()
-        else:
-            pass
-    return True
+    if st.getSize() == 0:
+        return True
+    else:
+        return False
         
             
 ### Implement your code here
