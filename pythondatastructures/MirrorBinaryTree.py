@@ -21,8 +21,10 @@ def mirrorBinaryTree(root):
         root.left, root.right = root.right, root.left
     elif root.left is None:
         root.left = root.right
+        root.right = None
     elif root.right is None:
         root.right = root.left
+        root.left = None
     
 
 def buildLevelTree(levelorder):
