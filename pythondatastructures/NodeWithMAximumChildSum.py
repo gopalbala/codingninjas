@@ -20,6 +20,8 @@ def maxSumNode(tree):
         if t is not None:
             if t.children is not None:
                 s = 0
+                s += t.data
+                # print(len(t.children))
                 for tn in t.children:
                     q.put(tn)
                     s+= tn.data
