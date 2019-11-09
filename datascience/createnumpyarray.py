@@ -31,12 +31,9 @@ print(round(5/9),2)
 a = np.array( round(5/9,2),dtype=float)
 print(a)
 
-k = round(5/9,2)
-i = 1
-while k < 5.0:
-    print(k)
-    i+=1
-    k*=2
     
 dar = np.arange (round(5/9,2),5,round(5/9,2),dtype=float)
 print(dar)
+
+a = np.array([0, 1, 2, 3])
+print(a.shape)
