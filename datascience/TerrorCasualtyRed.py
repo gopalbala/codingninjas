@@ -27,8 +27,13 @@ with open('terrorismData.csv') as file_obj:
     np_casualty = np_killed + np_wounded
     
     bool_red = (np_state == 'Jharkhand') | (np_state == 'Odisha') | (np_state == 'Andhra Pradesh') | (np_state == 'Chhattisgarh')
-   
+    bool_jk = (np_state == 'Jammu and Kashmir')
+    
     np_cas_filter  = np_casualty[(bool_red)]
+    np_jk_filter = np_casualty[(bool_jk)]
+    
     cas_count = np.sum(np_cas_filter)
-    print(cas_count)
+    cas_jk = np.sum(np_jk_filter)
+    
+    print(cas_count, cas_jk)
    
