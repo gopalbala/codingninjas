@@ -4,7 +4,7 @@ import requests
 import json 
 
 def get_City_ID(city): 
-    header = {'user-key':'a0872ce198cd8c85d249e6188da90eb1'}
+    header = {'user-key':'xx'}
     indata   = {'q':city}
     r = requests.get('https://developers.zomato.com/api/v2.1/cities',params=indata,headers=header)
     data  = json.loads(r.text)
@@ -15,7 +15,7 @@ def get_City_ID(city):
     return 'NA'
 
 def get_cuisines(city_id):
-    header = {'user-key':'a0872ce198cd8c85d249e6188da90eb1'}
+    header = {'user-key':'xx'}
     indata = {'city_id':city_id}
     r = requests.get('https://developers.zomato.com/api/v2.1/cuisines',params=indata,headers=header)
     data   = json.loads(r.text)
